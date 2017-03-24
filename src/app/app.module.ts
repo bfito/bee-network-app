@@ -13,6 +13,7 @@ import { MainComponent } from './main/main.component';
 import { AddListBoxComponent } from './main/add-list-box/add-list-box.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MaterialModule } from '@angular/material';
+import { NavLandingPageComponent } from './landing-page/nav-landing-page/nav-landing-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MaterialModule } from '@angular/material';
     NavComponent,
     MainComponent,
     AddListBoxComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    NavLandingPageComponent
   ],
   imports: [
     BrowserModule,

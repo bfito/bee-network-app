@@ -14,12 +14,10 @@
 
 <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
     <div class="container">
-      <a class="navbar-brand">Bee Network</a>
       <ul class="nav navbar-nav" routerLinkActive="active">
         <li class="nav-item"><a class="nav-link"  (click)="loginModal.show()">Log In</a></li>
         <li class="nav-item"><a class="nav-link"  (click)="registerModal.show()">Register</a></li>
         <li class="nav-item"><a class="nav-link" routerLink="about">About</a></li>
-        <li> <a routerLink='/'> Phone List </a> </li>
       </ul>
     </div>
 </nav>
@@ -38,7 +36,7 @@
       </div>
       <div class="modal-body">
         <input class="form-control" type="text" name="username" placeholder="username">
-        <input class="form-control" type="password" name="username" placeholder="password">
+        <input class="form-control" type="password" name="password" placeholder="password">
 
         <button class='btn btn-primary'>LOGIN</button>
       </div>
@@ -60,28 +58,28 @@
       <div class="modal-body">
         <div class="btn-group">
           <label class="btn btn-success" [(ngModel)]="radioModel" btnRadio="bee" uncheckable>BeeKeeper</label>
-          <label class="btn btn-success" [(ngModel)]="radioModel" btnRadio="farm" uncheckable>FarmKeeper</label>
+          <label class="btn btn-success" [(ngModel)]="radioModel" btnRadio="farm" uncheckable>Farm</label>
         </div>
         <br><br>
         <input class="form-control" type="text" name="username" placeholder="Username">
-        <input class="form-control" type="password" name="username" placeholder="Password">
+        <input class="form-control" type="password" name="password" placeholder="Password">
         <input class="form-control" type="text" name="name" placeholder="Full Name">
 
         <div *ngIf='radioModel == "bee"'>
           <div class='input-group'>
-            <input class="form-control" type="text" name="location" placeholder="CITY">
-            <input class="form-control" type="text" name="location" placeholder="STATE">
+            <!-- <input class="form-control" type="text" name="city" placeholder="CITY"> -->
+            <input class="form-control" type="text" name="state" placeholder="STATE">
           </div>
           <label for="experience" >Years of experience</label>
           <input id='experience' class="form-control small-input" type="number" name="experience" placeholder="0" min='0'>
-          <label for="colonies" >How many colonies</label>
-          <input id='colonies' class="form-control small-input" type="number" name="colonies" placeholder="1" min='0'>
+          <label for="colonies" >How many hives</label>
+          <input id='colonies' class="form-control small-input" type="number" name="hives" placeholder="1" min='0'>
         </div>
         <div *ngIf='radioModel == "farm"'>
           <input class="form-control" type="text" name="farm-name" placeholder="Farm Name">
           <div class='input-group'>
-            <input class="form-control" type="text" name="location" placeholder="CITY">
-            <input class="form-control" type="text" name="location" placeholder="STATE">
+            <input class="form-control" type="text" name="city" placeholder="CITY">
+            <input class="form-control" type="text" name="state" placeholder="STATE">
           </div>
         </div>
 
