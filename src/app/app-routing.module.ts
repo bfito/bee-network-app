@@ -4,6 +4,7 @@ import { MainComponent } from './main/main.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ApiaryFarmListComponent } from './apiary-farm-list/apiary-farm-list.component';
 import { ApiaryFarmDetailComponent } from './apiary-farm-detail/apiary-farm-detail.component';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   {
@@ -11,17 +12,17 @@ const routes: Routes = [
     // children: []
     component: MainComponent
   },
-  // {
-  //   path: '',
-  //   // children: []
-  //   component: LandingPageComponent
-  // }
   {
     path: '',
     component: ApiaryFarmListComponent
   },
   {  path: 'listing/:id',
-    component: ApiaryFarmDetailComponent}
+    component: ApiaryFarmDetailComponent
+  },
+  {
+    path: 'about/:id',
+    component: AccountComponent
+  }
 ];
 
 @NgModule({

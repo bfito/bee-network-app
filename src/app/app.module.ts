@@ -18,6 +18,7 @@ import { NavLandingPageComponent } from './landing-page/nav-landing-page/nav-lan
 import { ApiaryFarmListComponent } from './apiary-farm-list/apiary-farm-list.component';
 import { ApiaryFarmDetailComponent } from './apiary-farm-detail/apiary-farm-detail.component';
 import { ApiaryFarmService } from './apiary-farm.service';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ApiaryFarmService } from './apiary-farm.service';
     NavLandingPageComponent,
     // SearchComponent,
     ApiaryFarmListComponent,
-    ApiaryFarmDetailComponent
+    ApiaryFarmDetailComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

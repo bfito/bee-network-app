@@ -23,5 +23,4 @@ export class ApiaryFarmListComponent implements OnInit {
         this.errorMessage = "There was an error. Try again later."
       });
   }
-
 }

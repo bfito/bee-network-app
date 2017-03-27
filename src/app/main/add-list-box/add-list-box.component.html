@@ -13,12 +13,13 @@
 
 
 <div class="box-listing-container">
-  <md-card class="box-listing .col-xs-6 .col-sm-4">
-    <md-card-title> Farm 1 </md-card-title>
-    <md-card-subtitle> subtitle </md-card-subtitle>
+  <md-card class="box-listing .col-xs-6 .col-sm-4" *ngFor="let apiaryFarm of apiaryFarms">
+    <md-card-title> {{ apiaryFarm.name }} </md-card-title>
+    <md-card-subtitle> {{ apiaryFarm.state }} </md-card-subtitle>
   </md-card>
-  <md-card class="box-listing .col-xs-6 .col-sm-4"> Farm 2 </md-card>
-  <md-card class="box-listing .col-xs-6 .col-sm-4"> Farm 3 </md-card>
+  <!-- <md-card class="box-listing .col-xs-6 .col-sm-4"> Farm 2 </md-card>
+  <md-card class="box-listing .col-xs-6 .col-sm-4"> Farm 3 </md-card> -->
   <md-card class="box-listing .col-xs-6 .col-sm-4"> Search for a Farm </md-card>
+
 
 </div>
