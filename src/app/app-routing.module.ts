@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainComponent } from './main/main.component'
+import { MainComponent } from './main/main.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ApiaryFarmListComponent } from './apiary-farm-list/apiary-farm-list.component';
+import { ApiaryFarmDetailComponent } from './apiary-farm-detail/apiary-farm-detail.component';
 
 const routes: Routes = [
   {
@@ -9,11 +11,17 @@ const routes: Routes = [
     // children: []
     component: MainComponent
   },
+  // {
+  //   path: '',
+  //   // children: []
+  //   component: LandingPageComponent
+  // }
   {
     path: '',
-    // children: []
-    component: LandingPageComponent
-  }
+    component: ApiaryFarmListComponent
+  },
+  {  path: 'listing/:id',
+    component: ApiaryFarmDetailComponent}
 ];
 
 @NgModule({

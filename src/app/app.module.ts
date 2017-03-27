@@ -14,6 +14,10 @@ import { AddListBoxComponent } from './main/add-list-box/add-list-box.component'
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MaterialModule } from '@angular/material';
 import { NavLandingPageComponent } from './landing-page/nav-landing-page/nav-landing-page.component';
+// import { SearchComponent } from './search/search.component';
+import { ApiaryFarmListComponent } from './apiary-farm-list/apiary-farm-list.component';
+import { ApiaryFarmDetailComponent } from './apiary-farm-detail/apiary-farm-detail.component';
+import { ApiaryFarmService } from './apiary-farm.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,10 @@ import { NavLandingPageComponent } from './landing-page/nav-landing-page/nav-lan
     MainComponent,
     AddListBoxComponent,
     LandingPageComponent,
-    NavLandingPageComponent
+    NavLandingPageComponent,
+    // SearchComponent,
+    ApiaryFarmListComponent,
+    ApiaryFarmDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +41,7 @@ import { NavLandingPageComponent } from './landing-page/nav-landing-page/nav-lan
     ButtonsModule,
     MaterialModule,
   ],
-  providers: [],
+  providers: [ApiaryFarmService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

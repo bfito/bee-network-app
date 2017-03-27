@@ -1,0 +1,13 @@
+<p>
+  bee-farm-list works!
+</p>
+
+<a [routerLink]="['listing', 42]"> View Details </a>
+
+<h1> Apiary & Farm list </h1>
+   <div>
+     <div *ngFor="let apiaryFarm of apiaryFarms">
+       <h3> {{ apiaryFarm.name }} </h3>
+       <p> {{ apiaryFarm.state }} </p>
+     </div>
+   </div>
