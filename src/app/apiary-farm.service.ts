@@ -24,6 +24,14 @@ export class ApiaryFarmService {
         .then(apiResponse => apiResponse.json())
   }
 
+postListing(listing) {
+  const options = { withCredentials: true };
+
+    return this.myHttp.post(`${this.BASE_URL}/api/apiaryFarms`, listing, options)
+    .toPromise()
+    .then(apiResponse => apiResponse.json())
+}
+
   remove(id) {
     return this.myHttp.delete(`${this.BASE_URL}/api/apiaryFarms/${id}`)
       .toPromise()

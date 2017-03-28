@@ -19,6 +19,9 @@ import { ApiaryFarmListComponent } from './apiary-farm-list/apiary-farm-list.com
 import { ApiaryFarmDetailComponent } from './apiary-farm-detail/apiary-farm-detail.component';
 import { ApiaryFarmService } from './apiary-farm.service';
 import { AccountComponent } from './account/account.component';
+import { PostListingComponent } from './post-listing/post-listing.component';
+import { TransactionsComponent } from './transactions/transactions.component';
+import { PostApiaryFarmListingComponent } from './post-apiary-farm-listing/post-apiary-farm-listing.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { AccountComponent } from './account/account.component';
     // SearchComponent,
     ApiaryFarmListComponent,
     ApiaryFarmDetailComponent,
-    AccountComponent
+    AccountComponent,
+    PostListingComponent,
+    TransactionsComponent,
+    PostApiaryFarmListingComponent
   ],
   imports: [
     BrowserModule,

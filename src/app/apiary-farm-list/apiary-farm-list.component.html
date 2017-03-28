@@ -1,7 +1,3 @@
-<p>
-  bee-farm-list works!
-</p>
-
 <a [routerLink]="['listing', 42]"> View Details </a>
 
 <h1> Apiary / Farm list </h1>
@@ -9,5 +5,7 @@
      <div *ngFor="let apiaryFarm of apiaryFarms">
        <h3> {{ apiaryFarm.name }} </h3>
        <p> {{ apiaryFarm.state }} </p>
+       <a [routerLink]="['phone', phone._id]">
+      View Details </a>
      </div>
    </div>
