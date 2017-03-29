@@ -5,19 +5,19 @@
 
       <table class="example-full-width" cellspacing="0"><tr>
         <md-input-container class="example-full-width">
-          <input mdInput placeholder="Farm/Apiary Name">
+          <input [(ngModel)]="listingInfo.FarmApiary" name="FarmApiary" mdInput placeholder="Farm/Apiary Name">
         </md-input-container>
       </tr></table>
 
       <table class="example-full-width" cellspacing="0"><tr>
         <td>
           <md-input-container class="example-full-width">
-            <input type="date" mdInput placeholder="Start Date">
+            <input [(ngModel)]="listingInfo.StartDate" name="StartDate" type="date" mdInput placeholder="Start Date">
           </md-input-container>
         </td>
           <td>
             <md-input-container class="example-full-width">
-              <input type="date" mdInput placeholder="End Date">
+              <input [(ngModel)]="listingInfo.EndDate" name="EndDate" type="date" mdInput placeholder="End Date">
             </md-input-container>
           </td>
         </tr>
@@ -25,24 +25,24 @@
 
       <table class="example-full-width" cellspacing="0"><tr>
         <md-input-container class="example-full-width">
-          <input mdInput placeholder="Address">
+          <input [(ngModel)]="listingInfo.Address" name="Address" mdInput placeholder="Address">
         </md-input-container>
       </tr></table>
       <table class="example-full-width" cellspacing="0"><tr>
         <td><md-input-container class="example-full-width">
-          <input mdInput placeholder="City">
+          <input [(ngModel)]="listingInfo.City" name="City" mdInput placeholder="City">
         </md-input-container></td>
         <td><md-input-container class="example-full-width">
-          <input mdInput placeholder="State">
+          <input [(ngModel)]="listingInfo.State" name="State" mdInput placeholder="State">
         </md-input-container></td>
         <td><md-input-container class="example-full-width">
-          <input mdInput #postalCode maxlength="5" placeholder="Zip Code">
+          <input [(ngModel)]="listingInfo.postalCode" name="postalCode" mdInput #postalCode maxlength="5" placeholder="Zip Code">
           <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
         </md-input-container></td>
       </table>
       <table class="example-full-width" cellspacing="0"s>
         <tr><md-input-container class="example-full-width">
-          <textarea mdInput placeholder="Message"></textarea>
+          <textarea [(ngModel)]="listingInfo.Message" name="Message" mdInput placeholder="Message"></textarea>
         </md-input-container></tr>
       </table>
 
@@ -50,7 +50,8 @@
 
     </form>
     <md-card-actions>
-      <button md-button (click)="postNewListing(listingInfo)">Submit</button>
+      <button md-button (click)="postNewListing(listingInfo)"
+      onclick="document.location.href=`/main`">Submit</button>
     </md-card-actions>
   </md-card>
 </div>

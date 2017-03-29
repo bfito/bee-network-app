@@ -31,26 +31,19 @@ export class PostApiaryFarmListingComponent implements OnInit {
 
   constructor(
     private myApiaryFarmsService: ApiaryFarmService,
-    private mySession: SessionService
+    private mySession: SessionService,
+    private myRoute: ActivatedRoute,
+   private myNavigator: Router
   ) { }
 
   ngOnInit() {
   }
 
-  // getMyListing() {
-  //   this.myApiaryFarmsService.myListing()
-  //     .then((apiResult) => {
-  //       console.log(apiResult);
-  //     })
-  //     .catch((err) => {
-  //       console.log('Error while retrieving your list of classes.', err);
-  //     })
-  // }
-
   postNewListing() {
     this.myApiaryFarmsService.postListing(this.listingInfo)
       .then((apiResult) => {
         console.log(apiResult);
+        this.myNavigator.navigate(['main'])
       })
       .catch((err) => {
         console.log('Error creating listing', err);

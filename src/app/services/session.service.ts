@@ -5,7 +5,9 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class SessionService {
-  BASE_URL: string = 'http://localhost:3000';
+  // BASE_URL: string = 'http://localhost:3000';
+  BASE_URL: string = '';
+
   constructor(private http: Http) { }
 
   logout() {

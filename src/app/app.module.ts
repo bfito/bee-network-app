@@ -28,11 +28,6 @@ import { NavComponent } from './nav/nav.component';
 import { GetApiaryFarmListingComponent } from './get-apiary-farm-listing/get-apiary-farm-listing.component';
 // import { DatepickerComponent } from './datepicker/datepicker.component';
 // import { DatepickerModule } from 'ng2-bootstrap/datepicker';
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
