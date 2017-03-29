@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiaryFarmService } from '../apiary-farm.service';
+import { ApiaryFarmService } from '../services/apiary-farm.service';
 
 @Component({
   selector: 'app-account',

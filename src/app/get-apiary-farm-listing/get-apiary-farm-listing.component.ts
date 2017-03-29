@@ -2,25 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { ApiaryFarmService } from '../services/apiary-farm.service'
 
 @Component({
-  selector: 'app-apiary-farm-list',
-  templateUrl: './apiary-farm-list.component.html',
-  styleUrls: ['./apiary-farm-list.component.scss'],
+  selector: 'app-get-apiary-farm-listing',
+  templateUrl: './get-apiary-farm-listing.component.html',
+  styleUrls: ['./get-apiary-farm-listing.component.scss'],
   providers: [ApiaryFarmService]
 })
-
-export class ApiaryFarmListComponent implements OnInit {
-  apiaryFarms: Array<Object> = [];
+export class GetApiaryFarmListingComponent implements OnInit {
+  apiaryFarmsListings: Array<Object> = [];
   errorMessage: string = '';
 
   constructor(private myApiaryFarmsService: ApiaryFarmService) { }
 
   ngOnInit() {
-    this.myApiaryFarmsService.getList()
+    this.myApiaryFarmsService.getListing()
       .then((apiaryFarmList) => {
-        this.apiaryFarms = apiaryFarmList;
+        this.apiaryFarmsListing = apiaryFarmList;
       })
       .catch((err) => {
         this.errorMessage = "There was an error. Try again later."
       });
+    }
   }
-}

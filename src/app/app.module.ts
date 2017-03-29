@@ -8,7 +8,7 @@ import { ButtonsModule } from 'ng2-bootstrap/buttons';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
-import { NavComponent } from './nav/nav.component';
+// import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './main/main.component';
 import { AddListBoxComponent } from './main/add-list-box/add-list-box.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -17,17 +17,25 @@ import { NavLandingPageComponent } from './landing-page/nav-landing-page/nav-lan
 // import { SearchComponent } from './search/search.component';
 import { ApiaryFarmListComponent } from './apiary-farm-list/apiary-farm-list.component';
 import { ApiaryFarmDetailComponent } from './apiary-farm-detail/apiary-farm-detail.component';
-import { ApiaryFarmService } from './apiary-farm.service';
 import { AccountComponent } from './account/account.component';
-import { PostListingComponent } from './post-listing/post-listing.component';
-import { TransactionsComponent } from './transactions/transactions.component';
+// import { TransactionsComponent } from './transactions/transactions.component';
 import { PostApiaryFarmListingComponent } from './post-apiary-farm-listing/post-apiary-farm-listing.component';
+import { ApiaryFarmService } from './services/apiary-farm.service';
+import { SessionService } from './services/session.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { NavComponent } from './nav/nav.component';
+import { GetApiaryFarmListingComponent } from './get-apiary-farm-listing/get-apiary-farm-listing.component';
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    NavComponent,
+    // NavComponent,
     MainComponent,
     AddListBoxComponent,
     LandingPageComponent,
@@ -36,20 +44,23 @@ import { PostApiaryFarmListingComponent } from './post-apiary-farm-listing/post-
     ApiaryFarmListComponent,
     ApiaryFarmDetailComponent,
     AccountComponent,
-    PostListingComponent,
-    TransactionsComponent,
-    PostApiaryFarmListingComponent
+    // PostListingComponent,
+    // TransactionsComponent,
+    PostApiaryFarmListingComponent,
+    NavComponent,
+    GetApiaryFarmListingComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
+    RouterModule,
     ModalModule.forRoot(),
     ButtonsModule,
     MaterialModule,
   ],
-  providers: [ApiaryFarmService],
+  providers: [ApiaryFarmService, SessionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

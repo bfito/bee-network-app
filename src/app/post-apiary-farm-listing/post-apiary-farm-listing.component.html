@@ -1,3 +1,44 @@
-<p>
-  post-apiary-farm-listing works!
-</p>
+<!-- <form>
+listingInfo = {
+  owner:     '',
+  name:      '',
+  location:  '',
+  postDate:  '',
+  startDate: '',
+  endDate:   '',
+  message:   '',
+</form> -->
+
+<!-- <md-card-title> {{ apiaryFarm.name }} </md-card-title> -->
+
+
+<div class="box-listing-container">
+  <md-card  class="box-listing .col-xs-6 .col-sm-4">
+    <form class="example-form">
+      <table class="example-full-width" cellspacing="0"><tr>
+
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="Address">
+        </md-input-container>
+      </tr></table>
+      <table class="example-full-width" cellspacing="0"><tr>
+        <td><md-input-container class="example-full-width">
+          <input mdInput placeholder="City">
+        </md-input-container></td>
+        <td><md-input-container class="example-full-width">
+          <input mdInput placeholder="State">
+        </md-input-container></td>
+        <td><md-input-container class="example-full-width">
+          <input mdInput #postalCode maxlength="5" placeholder="Zip Code">
+          <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+        </md-input-container></td>
+      </tr></table>
+
+
+
+    </form>
+    <md-card-actions>
+      <button md-button (click)="postNewListing(listingInfo)">Submit</button>
+    </md-card-actions>
+  </md-card>
+</div>

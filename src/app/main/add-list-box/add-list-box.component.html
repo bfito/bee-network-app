@@ -13,13 +13,20 @@
 
 
 <div class="box-listing-container">
+  <md-card class="box-listing .col-xs-6 .col-sm-4">
+    <a [routerLink]="['postlisting']">
+        Listing
+    </a>
+  </md-card>
   <md-card class="box-listing .col-xs-6 .col-sm-4" *ngFor="let apiaryFarm of apiaryFarms">
     <md-card-title> {{ apiaryFarm.name }} </md-card-title>
     <md-card-subtitle> {{ apiaryFarm.state }} </md-card-subtitle>
   </md-card>
   <!-- <md-card class="box-listing .col-xs-6 .col-sm-4"> Farm 2 </md-card>
   <md-card class="box-listing .col-xs-6 .col-sm-4"> Farm 3 </md-card> -->
-  <md-card class="box-listing .col-xs-6 .col-sm-4"> Search for a Farm </md-card>
+  <!-- <router-link to="home" tag="div">Home</router-link> -->
+  <!-- <router-link to="listing/:id" tag="md-car">Home</router-link> -->
+  <!-- <md-card routerLink='/listing/:id' class="box-listing .col-xs-6 .col-sm-4"> Search for a Farm </md-card> -->
 
 
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiaryFarmService } from '../../apiary-farm.service'
+import { ApiaryFarmService } from '../../services/apiary-farm.service'
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
