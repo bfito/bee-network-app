@@ -16,7 +16,7 @@ export class GetApiaryFarmListingComponent implements OnInit {
   ngOnInit() {
     this.myApiaryFarmsService.getListing()
       .then((apiaryFarmList) => {
-        this.apiaryFarmsListing = apiaryFarmList;
+        this.apiaryFarmsListings = apiaryFarmList;
       })
       .catch((err) => {
         this.errorMessage = "There was an error. Try again later."

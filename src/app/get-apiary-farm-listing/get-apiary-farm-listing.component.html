@@ -1,4 +1,7 @@
-<ul *ngFor="let apiaryFarmsListing of apiaryFarmsListings">
-  <li> {{ apiaryFarmsListing._id }} </li>
-    <li> {{ apiaryFarmsListing.State }} </li>
-<ul>
+<div class="theGreatDivider"></div>
+  <div class="box-listing-container">
+    <md-card class="box-listing .col-xs-6 .col-sm-4" *ngFor="let apiaryFarmsListing of apiaryFarmsListings">
+      <md-card-title> {{ apiaryFarmsListing._id }} </md-card-title>
+      <md-card-subtitle> {{ apiaryFarmsListing.State }} </md-card-subtitle>
+    </md-card>
+  <div>
