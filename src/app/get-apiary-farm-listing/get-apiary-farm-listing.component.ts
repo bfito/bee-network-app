@@ -7,7 +7,7 @@ import { ApiaryFarmService } from '../services/apiary-farm.service'
   styleUrls: ['./get-apiary-farm-listing.component.scss'],
   providers: [ApiaryFarmService]
 })
-export class GetApiaryFarmListingComponent implements OnInit {
+export class GetApiaryFarmListingComponent implements OnInit{
   apiaryFarmsListings: Array<Object> = [];
   errorMessage: string = '';
 

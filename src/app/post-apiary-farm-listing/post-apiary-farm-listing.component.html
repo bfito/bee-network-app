@@ -1,22 +1,29 @@
-<!-- <form>
-listingInfo = {
-  owner:     '',
-  name:      '',
-  location:  '',
-  postDate:  '',
-  startDate: '',
-  endDate:   '',
-  message:   '',
-</form> -->
-
-<!-- <md-card-title> {{ apiaryFarm.name }} </md-card-title> -->
-
-
 <div class="box-listing-container">
   <md-card  class="box-listing .col-xs-6 .col-sm-4">
     <form class="example-form">
-      <table class="example-full-width" cellspacing="0"><tr>
 
+
+      <table class="example-full-width" cellspacing="0"><tr>
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="Farm/Apiary Name">
+        </md-input-container>
+      </tr></table>
+
+      <table class="example-full-width" cellspacing="0"><tr>
+        <td>
+          <md-input-container class="example-full-width">
+            <input type="date" mdInput placeholder="Start Date">
+          </md-input-container>
+        </td>
+          <td>
+            <md-input-container class="example-full-width">
+              <input type="date" mdInput placeholder="End Date">
+            </md-input-container>
+          </td>
+        </tr>
+      </table>
+
+      <table class="example-full-width" cellspacing="0"><tr>
         <md-input-container class="example-full-width">
           <input mdInput placeholder="Address">
         </md-input-container>
@@ -32,7 +39,12 @@ listingInfo = {
           <input mdInput #postalCode maxlength="5" placeholder="Zip Code">
           <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
         </md-input-container></td>
-      </tr></table>
+      </table>
+      <table class="example-full-width" cellspacing="0"s>
+        <tr><md-input-container class="example-full-width">
+          <textarea mdInput placeholder="Message"></textarea>
+        </md-input-container></tr>
+      </table>
 
 
 

@@ -17,7 +17,7 @@ export class SessionService {
   isLoggedIn() {
     //{ withCredentials: true } is supposed to share cookies across different domains.  It does not seem to be working.
     const options = { withCredentials: true };
-    return this.http.get(`${this.BASE_URL}/api/loggedin`, options)
+    return this.http.get(`${this.BASE_URL}/api/users`, options)
     .toPromise()
     .then(apiResponse => apiResponse.json());
   }

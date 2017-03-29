@@ -26,5 +26,11 @@
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/wow.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script>
+    angular.module('datepickerBasicUsage', ['ngMaterial', 'ngMessages']).controller('AppCtrl', function() {
+    this.myDate = new Date();
+    this.isOpen = false;
+    });
+    </script>
 </body>
 </html>

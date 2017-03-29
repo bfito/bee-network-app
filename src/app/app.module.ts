@@ -26,6 +26,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 import { GetApiaryFarmListingComponent } from './get-apiary-farm-listing/get-apiary-farm-listing.component';
+// import { DatepickerComponent } from './datepicker/datepicker.component';
+// import { DatepickerModule } from 'ng2-bootstrap/datepicker';
 
 
 
@@ -49,6 +51,7 @@ import { GetApiaryFarmListingComponent } from './get-apiary-farm-listing/get-api
     PostApiaryFarmListingComponent,
     NavComponent,
     GetApiaryFarmListingComponent,
+    // DatepickerComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +64,7 @@ import { GetApiaryFarmListingComponent } from './get-apiary-farm-listing/get-api
     MaterialModule,
   ],
   providers: [ApiaryFarmService, SessionService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
